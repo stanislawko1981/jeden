@@ -9,27 +9,30 @@
 <body>
 
 <script language="javascript" type="text/javascript">
-<!--
-var lewy=1, prawy=100, srodek, odp, krokow=0;
-alert("Witaj  w zgadywance liczbowej.\n\n
-		Pomysl sobie liczbe z przedzialu  od 1 do 100.");
-do
-{
-srodek=(lewy+prawy)/2;
-krokow++;
-odp=prompt("Czy twoja liczba to"+srodek+"?
-			[odpowiedzi: < -mniejsza, > -wieksza, = -tak]","="};
-switch (odp)
-{
-case '<':prawy=srodek; break;
-case '>':lewy=srodek; break;
-case '=':break;
-default:
-	alert("Uzyles niepoprawnego znaku.");
-	korkow--;}
-
-} while(odp!='=');
-alert twoja liczba to "+srodek+" zgadlem ja za"+krokow+" proba.";
-
-//-->
+	<!--
+	  var lewy = 1;
+	  var prawy = 100;
+	  var srodek = 0;
+	  var odp = 0;
+	  var krokow = 0;
+	  alert("Witaj  w zgadywance liczbowej.\n\nPomysl sobie liczbe z przedzialu  od 1 do 100.");
+	  do {
+	    srodek=(lewy+prawy)/2;
+	    krokow++;
+	    odp=prompt(
+	      "Czy twoja liczba to" +
+	      srodek +
+	      " ? [odpowiedzi: < -mniejsza, > -wieksza, = -tak]","="
+	    );
+	    switch (odp) {
+	      case '<': prawy = srodek; break;
+	      case '>': lewy = srodek; break;
+	      case '=': break;
+	      default:
+	        alert("Uzyles niepoprawnego znaku.");
+	    }
+	  } while (odp!='=');
+	  alert("twoja liczba to "+srodek+" zgadlem ja za"+krokow+" proba.");
+	//-->
 </script>
+</body>
