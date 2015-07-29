@@ -40,9 +40,28 @@ function correct() {
   debug();
 }
 
+debugWindow = document.getElementById('debug_window');
+debugButton = document.getElementById('debug');
+
+function toggle_debug_window() {
+  console.log('WTF??');
+  if (debugWindow.style.display === 'none') {
+    debugWindow.style.display = '';
+    debugButton.innerHTML = 'SHOW DEBUG';
+  } else {
+    debugWindow.style.display = 'none';
+    debugButton.innerHTML = 'HIDE DEBUG';
+  }
+}
+
 document.getElementById('begin').addEventListener('click', begin, false);
 document.getElementById('less').addEventListener('click', less, false);
 document.getElementById('more').addEventListener('click', more, false);
 document.getElementById('correct').addEventListener('click', correct, false);
+document.getElementById('debug').addEventListener(
+  'click',
+  toggle_debug_window,
+  false
+);
 document.getElementById('start').innerHTML = start;
 document.getElementById('stop').innerHTML = stop;
