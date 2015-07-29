@@ -1,38 +1,28 @@
-<!DOCTYPE HTML PUBLIC "-//WC3//DTD HTML 4.0
+<!DOCTYPE html>
 <html>
 <head>
-<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML"; CHARSET=ISO-8859-2">
-<META NAME="OZ" CONTENT="STANISLAW KORWAT">
-<META NAME="DESCRIPTION" CONTENT="WEBMASTER">
-<META NAME="KEYWORDS" CONTENT="PREZENTACJA">
+  <meta charset="utf-8">
 </head>
 <body>
-
-<script language="javascript" type="text/javascript">
-	<!--
-	  var lewy = 1;
-	  var prawy = 100;
-	  var srodek = 0;
-	  var odp = 0;
-	  var krokow = 0;
-	  alert("Witaj  w zgadywance liczbowej.\n\nPomysl sobie liczbe z przedzialu  od 1 do 100.");
-	  do {
-	    srodek=(lewy+prawy)/2;
-	    krokow++;
-	    odp=prompt(
-	      "Czy twoja liczba to" +
-	      srodek +
-	      " ? [odpowiedzi: < -mniejsza, > -wieksza, = -tak]","="
-	    );
-	    switch (odp) {
-	      case '<': prawy = srodek; break;
-	      case '>': lewy = srodek; break;
-	      case '=': break;
-	      default:
-	        alert("Uzyles niepoprawnego znaku.");
-	    }
-	  } while (odp!='=');
-	  alert("twoja liczba to "+srodek+" zgadlem ja za"+krokow+" proba.");
-	//-->
-</script>
+	<div id="first">
+		Pomyśl jakąś liczbę całkowitą z zakresu od <span id="start"></span>
+		do <span id="stop"></span>
+		<button id="begin">Pomyślałem</button>
+	</div>
+	<div id="second" style="display: none;">
+		Twoja liczba to <span id="result"></span>
+		<button id="correct">Zgadłeś</button>
+		<button id="less">Mniej</button>
+		<button id="more">Więcej</button>
+	</div>
+	<button id="debug">SHOW DEBUG</button>
+	<div id="debug_window" style="border: solid 1px black; display: none">
+		<p>Smallest: <span id="smallest"></span></p>
+		<p>Biggest: <span id="biggest"></span></p>
+		<p>Guess: <span id="guess"></span></p>
+		<p>Start: <span id="start_"></span></p>
+		<p>Stop: <span id="stop_"></span></p>
+	</div>
+	<script src="zgadywanka.js"></script>
 </body>
+</html>
